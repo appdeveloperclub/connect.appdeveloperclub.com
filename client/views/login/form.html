@@ -7,9 +7,9 @@
 				<p>{{{_ "Please_wait_activation"}}}</p>
 			</header>
 		{{else}}
-			<p class="login-form-text">Please sign-in using Github</p>
+			<p class="login-form-text">Please re-authenticate with Github</p>
 			{{ > loginServices }}
-<!-- 			{{#if needsValidateEmail}}
+			{{#if needsValidateEmail}}
 				<div class="alert alert-danger">
 					{{_ "You_need_confirm_email"}}
 				</div>
@@ -39,11 +39,11 @@
 			</div>
 			<div class="forgot-password {{showForgotPasswordLink}}">
 				<a href="">{{_ 'Forgot_password'}}</a>
-			</div> -->
+			</div>
 		{{/if}}
-<!-- 		<div class="back-to-login {{showBackToLoginLink}}">
+		<div class="back-to-login {{showBackToLoginLink}}">
 			<a href="">{{_ 'Back_to_login'}}</a>
-		</div> -->
+		</div>
 	</form>
   <div class='login-terms'>
     By proceeding to create your account and use Connect, you are agreeing to our <a href="/terms-of-service">Terms of Service</a> and <a href="/privacy-policy">Privacy Policy</a>. If you do not agree, you cannot use Connect. This app is a derivative of and was proudly built using <a href="https://github.com/RocketChat/Rocket.Chat">Rocket.Chat</a>.
