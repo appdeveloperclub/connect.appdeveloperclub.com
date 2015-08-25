@@ -594,7 +594,7 @@ label.required:after {
 	display: inline-block;
 	padding: 9px 12px;
 	background-color: #FFF;
-	color: rgba(255, 255, 255, 0.85);
+	color: rgba(0, 0, 0, 0.85);
 	font-weight: 500;
 	font-size: 13px;
 	margin: 4px;
@@ -624,7 +624,7 @@ label.required:after {
 	}
 	&:hover {
 		text-decoration: none;
-		color: #FFF;
+		color: #777;
 		&:before {
 			opacity: 1;
 		}
@@ -650,9 +650,10 @@ label.required:after {
 		background-color: #02acec;
 	}
 	&.clean {
-		background-color: rgba(0, 0, 0, 0.025);
+		background-color: rgba(20, 20, 20, 0.10);
 		font-size: 14px;
-		box-shadow: 0 0 3px rgba(0, 0, 0, 0.08);
+		box-shadow: 0 0 3px rgba(50, 50, 50, 0.15);
+
 		&.primary {
 			font-weight: 600;
 		}
@@ -667,7 +668,7 @@ label.required:after {
 		background-color: #dd4b39;
 	}
 	&.github {
-		background-color: #4c4c4c;
+		background-color: #dddddd;
 	}
 	&.trello {
 		background-color: #026aa7;
@@ -1030,7 +1031,7 @@ a.github-fork {
 		h4 {
 			display: block;
 			line-height: 18px;
-			color: rgba(255, 255, 255, 0.65);
+			color: rgba(20, 20, 20, 0.65);
 			font-size: 16px;
 			margin-top: 3px;
 			font-weight: 400;
@@ -1145,7 +1146,7 @@ a.github-fork {
 		a {
 			position: relative;
 			display: table;
-			color: rgba(255, 255, 255, 0.5);
+			color: rgba(10, 10, 10, 0.5);
 			width: 100%;
 			height: 20px;
 			padding: 15px 12px;
@@ -1157,7 +1158,7 @@ a.github-fork {
 			}
 			&:hover {
 				background-color: darken(@primary-background-color, 2%);
-				color: rgba(255, 255, 255, 0.75);
+				color: rgba(10, 10, 10, 0.75);
 				text-decoration: none;
 			}
 		}
@@ -1175,12 +1176,12 @@ a.github-fork {
 	&.active .info,
 	.info:hover {
 		h4 {
-			color: rgba(255, 255, 255, 0.85);
+			color: rgba(5, 5, 5, 0.85);
 		}
 	}
 	.hover & {
 		.info h4 {
-			color: rgba(255, 255, 255, 0.85);
+			color: rgba(5, 5, 5, 0.85);
 		}
 	}
 }
@@ -1326,9 +1327,10 @@ a.github-fork {
 		input[type='text'],
 		input[type='password'],
 		select {
+			margin-top: 10px;
 			border-width: 0 0 1px 0;
 			border-color: @tertiary-font-color;
-			background-color: #04436a;
+			background-color: #eeeeee;
 			color: @quaternary-font-color;
 			padding: 0 8px;
 			box-shadow: 0 0 0;
@@ -1491,9 +1493,12 @@ a.github-fork {
 		}
 		img {
 			display: inline-block;
-			max-width: 222px;
-			max-height: 43px;
-			margin-bottom: -10px;
+			max-height: 75px;
+			margin: -15px 35px 10px -14px;
+			// margin-left: -5px;
+			// margin-right: 35px;
+			// margin-top: -15px;
+			// margin-bottom: 10px;
 		}
 	}
 	.search-form {
@@ -1585,7 +1590,7 @@ a.github-fork {
 			&.active {
 				a {
 					background-color: rgba(255, 255, 255, 0.075);
-					color: rgba(255, 255, 255, 0.75);
+					color: rgba(60, 60, 60, 0.75);
 				}
 				.opt {
 					background-color: transparent;
@@ -3079,6 +3084,7 @@ a.github-fork {
 		}
 		a {
 			color: @primary-font-color;
+
 			&:hover {
 				text-decoration: none;
 				color: @secondary-font-color;
