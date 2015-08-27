@@ -1,61 +1,25 @@
-![Rocket.Chat logo](https://rocket.chat/images/logo/logo-dark.svg?v3)
+App Developer Club Connect Site
+===============================
 
-The Complete Open Source Chat Solution
+The App Developer Club connect website is the chat network for ADC. This site is run off of Rocket.Chat, which is a Slack-like clone built using Meteor. This allows for real-time two-way data binding so that messages can be properly propagated from the servers to users. We will create the proper channels for the club (designing, developing, ios, android, etc).
 
-## Demo
 
-Checkout the latest version at [https://demo.rocket.chat](https://demo.rocket.chat)
+Table of Contents
+-----------------
 
-Get the app for your Android phone:
+- [Features](#features)
+- [Requirements](#requirements)
+- [Getting Started](#getting-started)
+- [Deployment](#deployment)
+- [Changelog](#changelog)
+- [Contributing](#contributing)
+- [License](#license)
 
-[![Rocket.Chat on Google Play](https://developer.android.com/images/brand/en_app_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=com.konecty.rocket.chat)
 
-Try it on Ubuntu:
+Features
+--------
 
-[Deploy on VPS or standalone server](https://github.com/RocketChat/Rocket.Chat/wiki/Deploy-Rocket.Chat-without-docker)
-
-Try it with docker:
-
-```
-docker-compose up
-```
-
-and check it out at http://localhost:80
-
-Download the Native Cross-Platform Desktop Application at [Rocket.Chat.Electron](https://github.com/RocketChat/Rocket.Chat.Electron/releases)
-
-[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=49QX7TYCVZK8L)
-
-## About
-
-[![Build Status](https://img.shields.io/travis/RocketChat/Rocket.Chat/master.svg)](https://travis-ci.org/RocketChat/Rocket.Chat)
-[![Coverage Status](https://coveralls.io/repos/RocketChat/Rocket.Chat/badge.svg)](https://coveralls.io/r/RocketChat/Rocket.Chat)
-[![Code Climate](https://codeclimate.com/github/RocketChat/Rocket.Chat/badges/gpa.svg)](https://codeclimate.com/github/RocketChat/Rocket.Chat)
-[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/RocketChat/Rocket.Chat/raw/master/LICENSE)
-
-Rocket.Chat is a Web Chat Server, developed in JavaScript, using the [Meteor](https://www.meteor.com/install) fullstack framework.
-
-It is a great solution for communities and companies wanting to privately host their own chat service or for developers looking forward to build and evolve their own chat platforms.
-
-### On the News
-
-##### [Hacker News](https://news.ycombinator.com/item?id=9624737)
-> Yes, we made it to the #1
-
-##### [Product Hunt](http://www.producthunt.com/posts/rocket-chat)
-> Your own open source Slack-like chat
-
-##### [JavaScript Weekly](http://javascriptweekly.com/issues/234)
-> An open source Web based, channel based chat system (a la Slack) built using Meteor, the full stack JavaScript development platform.
-
-##### [wwwhatsnew.com](http://wwwhatsnew.com/2015/05/30/rocket-chat-para-los-programadores-que-quieran-ofrecer-un-chat-en-su-web/)
-> Para los programadores que quieran ofrecer un chat en su web
-
-##### [clasesdeperiodismo.com](http://www.clasesdeperiodismo.com/2015/05/30/un-chat-de-codigo-abierto-que-puedes-anadir-a-la-web/)
-> Un chat de código abierto que puedes añadir a la web
-
-## Features
-
+- **OAuth 2.0 Authentication** via Github
 - BYOS (bring your own server)
 - Multiple Rooms
 - Direct Messages
@@ -69,141 +33,68 @@ It is a great solution for communities and companies wanting to privately host t
 - Sent Message Edit and Deletion
 - Transcripts / History
 - File Upload / Sharing
-- I18n - Supports 22 Languages [Internationalization with Lingohub](https://translate.lingohub.com/engelgabriel/rocket-dot-chat/dashboard)
-- Hubot Friendly - [Hubot Integration Project](https://github.com/RocketChat/hubot-rocketchat)
+- I18n - Supports 22 Languages
 - Media Embeds
 - Link Previews
-- LDAP Authentication - [LDAP Authentication on Rocket.Chat Wiki](https://github.com/RocketChat/Rocket.Chat/wiki/LDAP-Authentication)
-- Face to Face Video Conferencing aka WebRTC (Alpha) - [How to video chat](https://github.com/RocketChat/Rocket.Chat/wiki/Using-Face-to-face-video-conference-%28aka-webrtc%29)
-- REST APIs - [Ready for testing ...](https://github.com/RocketChat/Rocket.Chat/wiki/REST-APIs)
-- Remote Locations Video Monitoring - [Early access ...](https://github.com/RocketChat/Rocket.Chat/wiki/Remote-Video-Monitoring)
-- Native Cross-Platform Desktop Application [Rocket.Chat.Electron - HELP WANTED](https://github.com/RocketChat/Rocket.Chat.Electron/releases)
-- Mobile app for iPhone, iPad, and iPod touch [Available now! - help us test](https://github.com/RocketChat/Rocket.Chat/wiki/Mobile-app-for-iPhones,-iPads,-iPod-Touch)
-- Mobile app for Android phone, tablet, and TV stick [Available now on Google Play!](https://play.google.com/store/apps/details?id=com.konecty.rocket.chat)
 
-### Roadmap
 
-#### In Progress
+Prerequisites
+-------------
 
-- Native iOS Application [Rocket.Chat.iOS - HELP WANTED](https://github.com/RocketChat/Rocket.Chat.iOS)
-- Native Android Application [Issue #271 - HELP WANTED](https://github.com/RocketChat/Rocket.Chat/issues/271)
-- External popout window for chat with website visitor, like Zopim, Olark, LiveChat, SnapEngage [Issue #519](https://github.com/RocketChat/Rocket.Chat/issues/519)
+- [MongoDB](http://www.mongodb.org/downloads)
+- [Node.js](http://nodejs.org)
+- [Meteor.js](https://www.meteor.com/install)
 
-#### Planned
+**Note:** There will be many more packages and plugins necessary to run the application. I suggest reading through which errors are raised when compiling either the web or mobile end and installing those necessary plugins into your computer. Note that you will probably need to install certain versions of python/rvm in order for some packages to work properly.
 
-- Off-the-Record (OTR) Messaging [Issue #36 - HELP WANTED](https://github.com/RocketChat/Rocket.Chat/issues/36)
-- Full text search
-- Kerberos Authentication
-- XMPP Multi-user chat (MUC)
 
-### Issues
+Getting Started
+---------------
 
-[Github Issues](https://github.com/RocketChat/Rocket.Chat/issues) are used to track todos, bugs, feature requests, and more.
+Get started by first cloning the repository:
 
-### Integrations
+```bash
+# Get the latest version:
+$ git clone https://github.com/appdeveloperclub/ADC_Connect_Website.git
+$ cd ADC_Connect_Website
 
-#### Hubot
-
-The docker image is ready.
-Everyone can start hacking the adapter code, or launch his/her own bot within a few minutes now.
-Please head over to the [Hubot Integration Project](https://github.com/RocketChat/hubot-rocketchat) for more information.
-
-#### Many, many, many more to come!
-
-We are developing the APIs based on the competition, so stay tunned and you will see a lot happening here.
-
-### Documentation
-
-Checkout [Github Wiki](https://github.com/RocketChat/Rocket.Chat/wiki) (coming soon)
-
-## Production Deployment
-
-### Unbuntu VPS or server
-
-Follow these [deployment instructions](https://github.com/RocketChat/Rocket.Chat/wiki/Deploy-Rocket.Chat-without-docker).
-
-### Docker
-
-Use the automated build at our [Official Docker Registry](https://registry.hub.docker.com/u/rocketchat/rocket.chat/)
-
-[![Rocket.Chat logo](https://d207aa93qlcgug.cloudfront.net/1.95.5.qa/img/nav/docker-logo-loggedout.png)](https://registry.hub.docker.com/u/rocketchat/rocket.chat/)
-
-```
-docker pull rocketchat/rocket.chat
+# To run the app, simply execute:
+$ meteor
 ```
 
-### sloppy.io
+Deployment
+----------
 
-Host your docker container at [sloppy.io](http://sloppy.io). Get an account and use the [quickstarter](https://github.com/sloppyio/quickstarters/tree/master/rocketchat)
+This section is WAY too complicated because there is a ton of configuration that I barely remember. I will get back to this section at a later time.
 
-### Heroku
+Changelog
+---------
 
-Host your own Rocket.Chat server for **FREE** with [One-Click Deploy](https://heroku.com/deploy?template=https://github.com/RocketChat/Rocket.Chat/tree/master)
+### 0.0.1 (August 21, 2015)
+- Working on CSS styling to match theme of all ADC sites.
+- Messaging works, added in Github OAuth.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/RocketChat/Rocket.Chat/tree/master)
 
+Contributing
+------------
 
+If something is unclear, confusing, or needs to be refactored, please let me know.
+Pull requests are always welcome, but due to the opinionated nature of this
+project, I cannot accept every pull request. Please open an issue before
+submitting a pull request. This project uses
+[Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) with a
+few minor exceptions. If you are submitting a pull request that involves
+Jade templates, please make sure you are using *spaces*, not tabs.
 
-## Development Installation
+License
+-------
 
-Prerequisites:
+The MIT License (MIT)
 
-* [Git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-* [Meteor](https://www.meteor.com/install)
+Copyright (c) 2014-2015 App Developer Club
 
-Now just clone and start the app:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-```sh
-git clone https://github.com/RocketChat/Rocket.Chat.git
-cd Rocket.Chat
-meteor
-```
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-or use docker:
-
-```
-git clone https://github.com/RocketChat/Rocket.Chat.git
-cd Rocket.Chat
-docker run -it -p 3000:3000 -v "$(pwd)":/app danieldent/meteor
-```
-
-## Credits
-
-Thanks to
-[Diego Sampaio](https://github.com/sampaiodiego),
-[Gabriel Engel](https://github.com/engelgabriel),
-[Marcelo Schmidt](https://github.com/marceloschmidt),
-[Rafael Caferati](https://github.com/rcaferati),
-[Rodrigo Nascimento](https://github.com/rodrigok),
-[Sing Li](https://github.com/Sing-Li)
-
-Emoji provided free by [Emoji One](http://emojione.com)
-
-Performance monitoring provided by [Kadira](https://kadira.io/)
-
-### Contributions
-
-#### We Need Your Help!
-
-A lot of work has already gone into Rocket.Chat, but we have much bigger plans for it!
-
-So if you'd like to be part of the project, please check out the [roadmap](https://github.com/RocketChat/Rocket.Chat/milestones) and [issues](https://github.com/RocketChat/Rocket.Chat/issues) to see if there's anything you can help with.
-
-### Translations
-
-We are experimenting [Lingohub](https://translate.lingohub.com/engelgabriel/rocket-dot-chat/dashboard).
-If you want to help, send an email to support at rocket.chat to be invited to the translation project.
-
-### Community
-
-Join the the conversation at [Twitter](http://twitter.com/RocketChatApp), [Facebook](https://www.facebook.com/RocketChatApp) or [Google Plus](https://plus.google.com/+RocketChatApp)
-
-### License
-
-Note that Rocket.Chat is distributed under the [MIT License](http://opensource.org/licenses/MIT).
-
-### Donate
-
-Rocket.Chat will be free forever, but you can help us speed-up the development!
-
-[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=49QX7TYCVZK8L)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
